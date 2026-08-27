@@ -2,14 +2,18 @@ import mongoose from "mongoose";
 import 'dotenv/config';
 
 
-function ConnectDB() {
+const ConnectDB = async () => {
     try {
-        mongoose.connect(process.env.MONGO_URI);
-        console.log('Database Connected!');
+        const uri = process.env.MONGO_URI;
+        if (!uri) {
+            throw new Error("MONGO_URI environment variable is not defined. Please set it in your environment / Render dashboard.");
+        }
+        await mongoose.connect(uri);
+        console.log('Database Connected Successfully!');
     } catch (err) {
-        console.log(err);
+        console.error('Database connection error:', err.message || err);
     }
-}
+};
 
 export default ConnectDB;
 

@@ -17,29 +17,49 @@ app.use(cors());
 app.use(express.json());
 
 
+app.get("/", (req, res) => {
+    res.send("Zerodha Clone Backend API is running.");
+});
+
 app.get("/get-holdings", async (req, res) => {
-    const allHoldings = await holdingsModel.find();
-    res.send(allHoldings);
-})
+    try {
+        const allHoldings = await holdingsModel.find();
+        res.send(allHoldings);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
 
 app.get("/get-positions", async (req, res) => {
-    const allPositions = await positionsModel.find();
-    res.send(allPositions);
-})
+    try {
+        const allPositions = await positionsModel.find();
+        res.send(allPositions);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
 
 app.post("/new-order", async (req, res) => {
-    const newOrder = new orderModel({
-        name: req.body.name,
-        qty: req.body.qty,
-        price: req.body.price,
-        mode: req.body.mode,
+    try {
+        const newOrder = new orderModel({
+            name: req.body.name,
+            qty: req.body.qty,
+            price: req.body.price,
+            mode: req.body.mode,
+        });
+        await newOrder.save(); 
+        res.status(201).json({ message: "Order saved successfully!", order: newOrder });
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+});
+
+const startServer = async () => {
+    await ConnectDB();
+    app.listen(port, () => {
+        console.log(`App is listening on port ${port}...`);
     });
-    await newOrder.save(); 
+};
 
-})
-
-app.listen(port, () => {
-    ConnectDB();
-    console.log('App is listening...');
-})
+startServer();
 
