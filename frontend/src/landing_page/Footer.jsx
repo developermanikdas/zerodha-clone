@@ -257,11 +257,11 @@ function Footer() {
             Dollars Colony, Opp. Clarence Public School, J.P Nagar 4th Phase,
             Bengaluru - 560078, Karnataka, India. For any complaints pertaining
             to securities broking please write to{" "}
-            <a href="#" className="text-decoration-none">
+            <a href="mailto:complaints@zerodha.com" className="text-decoration-none">
               complaints@zerodha.com
             </a>
             , for DP related to{" "}
-            <a href="#" className="text-decoration-none">
+            <a href="mailto:dp@zerodha.com" className="text-decoration-none">
               dp@zerodha.com
             </a>
             . Please ensure you carefully read the Risk Disclosure Document as
@@ -270,7 +270,7 @@ function Footer() {
 
           <p>
             Procedure to file a complaint on{" "}
-            <a href="#" className="text-decoration-none">
+            <a href="https://scores.sebi.gov.in" target="_blank" rel="noreferrer" className="text-decoration-none">
               SEBI SCORES
             </a>
             : Register on SCORES portal. Mandatory details for filing complaints
@@ -279,11 +279,11 @@ function Footer() {
           </p>
 
           <p>
-            <a href="#" className="text-decoration-none">
+            <a href="#dispute-resolution" className="text-decoration-none">
               Smart Online Dispute Resolution
             </a>{" "}
             |{" "}
-            <a href="#" className="text-decoration-none">
+            <a href="#grievances" className="text-decoration-none">
               Grievances Redressal Mechanism
             </a>
           </p>
@@ -303,7 +303,7 @@ function Footer() {
 
           <p>
             India's largest broker based on active clients.{" "}
-            <a href="#" className="text-decoration-none">
+            <a href="#factsheet" className="text-decoration-none">
               NSE broker factsheet
             </a>
           </p>

@@ -49,11 +49,11 @@ function SignupHero() {
 
           <p className="text-muted mt-4">
             By proceeding, you agree to the Zerodha{" "}
-            <a href="#" className="text-decoration-none">
+            <a href="#terms" className="text-decoration-none">
               terms
             </a>{" "}
             &{" "}
-            <a href="#" className="text-decoration-none">
+            <a href="#privacy" className="text-decoration-none">
               privacy policy
             </a>
           </p>
@@ -62,7 +62,7 @@ function SignupHero() {
 
           <p className="mb-0">
             Looking to open NRI account?{" "}
-            <a href="#" className="text-decoration-none">
+            <a href="#nri" className="text-decoration-none">
               Click here
             </a>
           </p>
