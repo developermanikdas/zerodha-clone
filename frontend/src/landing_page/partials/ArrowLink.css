@@ -1,0 +1,16 @@
+.arrow-link {
+  color: #387ed1;
+  transition: color 0.3s ease;
+}
+
+.arrow-link:hover {
+  color: #1a1a1a;
+}
+
+.arrow-link i {
+  transition: transform 0.3s ease;
+}
+
+.arrow-link:hover i {
+  transform: translateX(6px);
+}
