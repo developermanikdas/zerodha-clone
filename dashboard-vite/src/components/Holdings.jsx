@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { API_URL } from "../api";
 
 // import { holdings } from "../data/data.js";
 
@@ -8,7 +9,7 @@ const Holdings = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:9999/get-holdings")
+      .get(`${API_URL}/get-holdings`)
       .then((res) => {
         setHoldings(res.data);
       })
