@@ -5,8 +5,6 @@ import Education from "./Education";
 import KitePromotion from "./KitePromo";
 import Pricing from "./Pricing";
 import Stats from "./Stats";
-import OpenAccounts from "../OpenAccount";
-import Footer from "../Footer";
 import CallToAction from "../partials/CallToAction";
 
 function HomePage() {

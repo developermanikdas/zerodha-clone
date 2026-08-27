@@ -1,6 +1,5 @@
 import React from "react";
 import CustomTable from "../partials/CustomTable";
-import { accountOpening } from "../data/charges";
 
 function ValueAddedServices({ valueAddedServicesData }) {
   return (

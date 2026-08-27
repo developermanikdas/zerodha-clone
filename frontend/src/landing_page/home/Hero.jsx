@@ -7,7 +7,7 @@ function Hero() {
       <div className="row text-center d-flex justify-content-center align-items-center">
         <img
           src="media/images/homeHero.png"
-          alt="Hero Image"
+          alt="Zerodha Platform Banner"
           className="mb-1"
         />
         <CallToAction

@@ -1,6 +1,5 @@
 import React from "react";
 import SupportHero from "./SupportHero";
-import Footer from "../Footer";
 import SupportAccordion from "./SupportAccordion";
 import Sidebar from "./Sidebar";
 

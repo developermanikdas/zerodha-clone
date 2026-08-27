@@ -2,7 +2,6 @@ import React from "react";
 import LeftSection from "./LeftSection";
 import RightSection from "./RightSection";
 import Universe from "./Universe";
-import Footer from "../Footer";
 import HeroSection from "./HeroSection";
 import More from "./More";
 

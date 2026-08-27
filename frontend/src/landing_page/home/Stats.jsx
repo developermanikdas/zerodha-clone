@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ArrowLink from "../partials/Arrowink";
 
 function Stats() {
@@ -18,7 +17,7 @@ function Stats() {
           <p className="text-muted fs-5">
             No gimmicks, spam, "gamification", or annoying push notifications.
             High quality apps that you use at your pace, the way you like.{" "}
-            <a className="text-primary text-decoration-none">
+            <a href="#philosophies" className="text-primary text-decoration-none">
               Our philosophies{" "}
             </a>
             .
@@ -31,14 +30,14 @@ function Stats() {
           <h4>Do better with money</h4>
           <p className="text-muted fs-5">
             With initiatives like{" "}
-            <a className="text-primary text-decoration-none">Nudge</a> and{" "}
-            <a className="text-primary text-decoration-none">Kill Switch</a> ,
+            <a href="#nudge" className="text-primary text-decoration-none">Nudge</a> and{" "}
+            <a href="#kill-switch" className="text-primary text-decoration-none">Kill Switch</a> ,
             we don't just facilitate transactions, but actively help you do
             better with your money.
           </p>
         </div>
         <div className="col-12 col-md-6">
-          <img className="img-fluid" src="media/images/ecosystem.png" />
+          <img className="img-fluid" src="media/images/ecosystem.png" alt="Ecosystem" />
           <div className="d-flex flex-column flex-md-row justify-content-center align-items-center gap-4 text-primary">
             <ArrowLink text="Explore Our Products" link="#" />
             <ArrowLink text="Try a demo" link="#" />
