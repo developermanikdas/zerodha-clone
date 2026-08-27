@@ -1,4 +1,5 @@
 import express from "express";
+import mongoose from "mongoose";
 import ConnectDB from "./db.js";
 
 
@@ -19,6 +20,19 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
     res.send("Zerodha Clone Backend API is running.");
+});
+
+// Health check endpoint
+app.get('/health-check', async (req, res) => {
+  try {
+    if (!mongoose.connection || !mongoose.connection.db) {
+      return res.status(503).json({ status: 'error', message: 'Database connection not initialized' });
+    }
+    await mongoose.connection.db.command({ ping: 1 });
+    res.json({ status: 'ok', message: 'Server and Database are alive!' });
+  } catch (err) {
+    res.status(500).json({ status: 'error', message: err.message });
+  }
 });
 
 app.get("/get-holdings", async (req, res) => {
